@@ -2,7 +2,7 @@
 
 pragma solidity >=0.4.22<0.9.0;
 
-contract CreateNFT {
+contract TicketNFT {
   uint256[] private tokensIds;
   mapping(uint256 => string) private _tokenURIs;
   
