@@ -6,8 +6,8 @@ contract CreateNFT {
   uint256[] private tokensIds;
   mapping(uint256 => string) private _tokenURIs;
   
-  function createTokenURI(string memory _tokenURI) public returs(uint256, string memory) {
-    uint256 currentTokenId = tokenIds.length;
+  function createTokenURI(string memory _tokenURI) public returns(uint256, string memory) {
+    uint256 currentTokenId = tokensIds.length;
     setTokenURI(currentTokenId, _tokenURI);
     tokensIds.push(currentTokenId++);
     return (currentTokenId, _tokenURI);
@@ -18,7 +18,7 @@ contract CreateNFT {
   }
 
   function getTokenURI(uint256 tokenId) public view returns(string memory) {
-    string memory _tokenURI = _tokenURis[tokenId];
+    string memory _tokenURI = _tokenURIs[tokenId];
     return _tokenURI;
   }
 }
